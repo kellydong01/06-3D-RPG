@@ -49,6 +49,8 @@ surfaces/2 = {
 
 [node name="Target" type="StaticBody" groups=["target"]]
 transform = Transform( 6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0 )
+collision_layer = 2
+collision_mask = 2
 script = ExtResource( 4 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
