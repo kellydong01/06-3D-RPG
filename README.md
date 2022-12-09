@@ -1,5 +1,15 @@
-# Godot-3D-Template
+```
+C220 Project 06 ~ 3D RPG
 
-Godot Template for 3D Games
 
-Includes Keyboard mappings and Global.gd
+Implementation
+
+
+References
+
+Future Development
+None
+
+Created by
+Kelly Dong
+```
