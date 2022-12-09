@@ -1,3 +1,60 @@
-[gd_scene format=2]
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Terrain.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Target/Target.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/RayCast.gd" type="Script" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0, 0, 1 )
+emission_enabled = true
+emission = Color( 1, 0, 0, 1 )
+emission_energy = 3.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+radius = 0.5
+height = 1.0
 
 [node name="Game" type="Spatial"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.527223, 0, -0.849727, 0, 1, 0, 0.849727, 0, -0.527223, 49.8334, 0.503176, -1.06614 )
+script = ExtResource( 2 )
+
+[node name="Pivot" type="Position3D" parent="Player"]
+
+[node name="Camera" type="Camera" parent="Player/Pivot"]
+transform = Transform( -1, 1.51808e-08, -8.60947e-08, 0, 0.984808, 0.173648, 8.74228e-08, 0.173648, -0.984808, 0, 5, -8 )
+
+[node name="RayCast" type="RayCast" parent="Player/Pivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, 100 )
+script = ExtResource( 5 )
+
+[node name="Reticle" type="Position3D" parent="Player/Pivot/RayCast"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Player/Pivot/RayCast/Reticle"]
+mesh = SubResource( 2 )
+
+[node name="Terrain" parent="." instance=ExtResource( 3 )]
+transform = Transform( 3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0 )
+
+[node name="Target_Container" type="Spatial" parent="."]
+
+[node name="Target" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( 5.63816, 0, 2.05212, 0, 6, 0, -2.05212, 0, 5.63816, -27, 4, 9 )
+
+[node name="Target2" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( 4.57086, 0, -3.88681, 0, 6, 0, 3.88681, 0, 4.57086, -23.7741, 4, -27.0769 )
+
+[node name="Target3" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( -3.19052, 0, -5.0814, 0, 6, 0, 5.0814, 0, -3.19052, 20.8251, 5.89904, -50.9103 )
+
+[node name="Target4" parent="Target_Container" instance=ExtResource( 4 )]
+transform = Transform( 1.48016, 1.70207, -5.55987, -3.01861, 5.12842, 0.766366, 4.96962, 2.60812, 2.12146, -42.365, 7.22381, -61.6332 )
