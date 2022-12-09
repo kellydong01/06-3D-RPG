@@ -14,6 +14,7 @@ Created on 12/6, worked on from 12/7-12/8. A simple 3D RPG game with some basic 
 - [Player's Gun](https://kenney.nl/assets/blaster-kit)
 - [Drone](https://kenney.nl/assets/space-kit)
 - [Background Music](https://pixabay.com/music/solo-guitar-the-beat-of-nature-122841/)
+- [All PBR Materials](https://ambientcg.com/)
 
 ## Future Development
 None
