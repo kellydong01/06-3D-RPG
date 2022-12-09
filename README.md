@@ -7,7 +7,7 @@ Created on 12/6, worked on from 12/7-12/8. A simple 3D RPG game with some basic 
 - Targets for the player
 - 'Cross hair'
 - Dialogue between the player and an NPC
-- An enemy
+- An enemy that flies around the map
 
 ## References
 - [Terrain Map](https://www.patreon.com/posts/blender-export-16916038)
