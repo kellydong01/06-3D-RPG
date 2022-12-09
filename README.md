@@ -10,7 +10,8 @@ Created on 12/6, worked on from 12/7-12/8. A simple 3D RPG game with some basic 
 - An enemy
 
 ## References
-- 
+- [Terrain Map](https://www.patreon.com/posts/blender-export-16916038)
+- [Player's Gun](https://kenney.nl/assets/blaster-kit)
 
 ## Future Development
 None
