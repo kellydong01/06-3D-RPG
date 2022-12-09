@@ -1,15 +1,19 @@
-```
-C220 Project 06 ~ 3D RPG
 
+# C220 Project 05 ~ FPS Maze
+Created on 12/6, worked on from 12/7-12/8. A simple 3D RPG game with some basic controls and RPG elements.
 
-Implementation
+## Implementation
+- Player controlled movement and shooting
+- Targets for the player
+- 'Cross hair'
+- Dialogue between the player and an NPC
+- An enemy
 
+## References
+- 
 
-References
-
-Future Development
+## Future Development
 None
 
-Created by
+## Created by
 Kelly Dong
-```
